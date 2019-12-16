@@ -1,0 +1,87 @@
+.header {
+    height: 120px;
+    padding: 49px 0 42px;
+    border-bottom: 1px solid $gray-300;
+
+    &__row {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navbar {
+        margin-left: 4px;
+    }
+
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            margin-right: 41px;
+        }
+
+        &__link {
+            font-size: 18px;
+            line-height: 27px;
+            font-family: $oswald;
+            font-weight: 500;
+            color: $gray-600;
+            position: relative;
+            padding-left: 35px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.25s ease-in-out;
+
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                line-height: 1;
+            }
+
+            .icon-cinema {
+                font-size: 20px;
+            }
+
+            .icon-view {
+                font-size: 27px;
+                margin-left: -2px;
+            }
+
+            .icon-star {
+                font-size: 21px;
+                margin-top: -1px;
+            }
+
+
+            &.active {
+                color: $blue;
+            }
+
+            &:hover {
+                color: $blue;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.point {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $orange;
+        position: absolute;
+        top: 0px;
+        right: -7px;
+    }
+}
+

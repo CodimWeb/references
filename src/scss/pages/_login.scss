@@ -1,0 +1,64 @@
+.login {
+    padding: 0 2px;
+
+    &__title {
+        font-family: $oswald;
+        letter-spacing: 1.6px;
+        font-weight: 600;
+        font-size: 92px;
+        line-height: 98px;
+        color: $gray-850;
+        margin: 0;
+        text-transform: uppercase;
+        margin: 113px 0 127px;
+    }
+
+    &__title__decor {
+        color: $blue;
+    }
+
+    &__description {
+        width: 600px;
+        margin: 0 auto 34px;
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            margin-right: -18px;
+        }
+
+        &__item {
+            &:nth-child(1) {
+                flex: 0 0 37%;
+                max-width: 37%;
+            }
+
+            &:nth-child(2) {
+                flex: 0 0 51.5%;
+                max-width: 51.5%;
+            }
+        }
+
+        &__title {
+            font-family: $oswald;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: $gray-850;
+            text-transform: uppercase;
+            margin: 0 0 13px;
+            letter-spacing: 0.5px;
+        }
+
+        &__text {
+            font-size: 15px;
+            line-height: 25px;
+            color: $gray-650;
+        }
+    }
+
+    &__auth {
+        max-width: 600px;
+        margin: 0 auto 30px;
+    }
+}

@@ -1,0 +1,139 @@
+.references {
+
+    &__nav-section {
+        padding-bottom: 25px;
+        border-bottom: 1px solid $gray-300;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        width: calc(100% - 350px);
+        max-width: calc(100% - 350px);
+        margin-top: 22px;
+        margin-bottom: 16px;
+    }
+
+    &__search {
+        margin-top: 30px;
+    }
+
+    &__form {
+        position: relative;
+
+        .icon-search {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $blue;
+            font-size: 21px;
+        }
+    }
+
+    &__search-field {
+        width: 308px;
+        min-width: 308px;
+        height: 50px;
+        border-radius: 30px;
+        background: $search-bg;
+        font-size: 15px;
+        color: $gray-850;
+        padding: 13px 47px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: $gray-650;
+            font-weight: 400 !important;
+        }
+
+        &:focus {
+            box-shadow: none;
+            border: none;
+            outline: none;
+            background: $search-bg;
+        }
+    }
+
+    &__search-btn {
+        height: auto;
+        width: auto;
+        line-height: 1;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: transparent;
+        }
+    }
+
+    &__nav__action {
+        display: flex;
+
+        .btn {
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__nav__tabs {
+
+        .nav-tabs {
+            border: none;
+            margin-top: 29px;
+        }
+
+        .nav-tabs .nav-item {
+            margin: 0 26px 0 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .nav-tabs .nav-link {
+            position: relative;
+            font-family: $oswald;
+            font-weight: 600;
+            color: $gray-600;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            transition: color 0.25s ease-in-out;
+
+            &.active {
+                color: $blue;
+
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 3px;
+                    background: $blue;
+                    position: absolute;
+                    left: 0;
+                    bottom: -26px;
+                }
+            }
+        }
+    }
+}
+
