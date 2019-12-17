@@ -1,6 +1,10 @@
 .references-item {
     position: relative;
 
+    &__label-container {
+        position: relative;
+    }
+
     &__label {
         display: inline-block;
         background: $orange;
@@ -9,10 +13,10 @@
         line-height: 14px;
         color: $white;
         text-transform: uppercase;
-        padding: 3px 5px;
+        padding: 3px 8px;
         position: absolute;
         right: 0;
-        top: 4px;
+        top: 1px;
         font-weight: 600;
 
         & + .references-item__for-user {
@@ -25,21 +29,32 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-left: 35px;
         font-size: 13px;
-        line-height: 19px;
-        margin-bottom: 12px;
+        line-height: 24px;
+        margin-bottom: 7px;
+        position: relative;
 
         .icon {
             color: $gray-850;
             font-size: 18px;
-            margin-left: 2px;
-            margin-right: 11px;
-            transform: translateY(1px);
+            // margin-left: 2px;
+            // margin-right: 11px;
+            // transform: translateY(1px);
             display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .icon-music {
             font-size: 19px;
+        }
+
+        .icon-list-outline {
+            font-size: 24px;
+            // margin-right: 7px;
         }
 
         a {

@@ -81,6 +81,14 @@ module.exports = (env, options) => {
                 filename: 'references.html',
                 template: 'src/references.html'
             }),
+            new HtmlWebpackPlugin({
+                filename: 'my-shares.html',
+                template: 'src/my-shares.html'
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'my-views.html',
+                template: 'src/my-views.html'
+            }),
             //img,
             new CopyWebpackPlugin([{
                 from: './src/img',
@@ -89,20 +97,9 @@ module.exports = (env, options) => {
               {
                 from: './src/fonts',
                 to: './fonts'
-              },
-            ]),
-        ],
-        optimization: {
-            minimizer: [new UglifyJsPlugin({
-                test: /\.js(\?.*)?$/i,
-                extractComments: {
-                    condition: true,
-                    filename() {
-                        return '';
-                    },
-                }
-            })],
-        },
+              }
+            ])
+        ]
     }
 
     conf.devtool = production ? false : 'eval-sourcemap';

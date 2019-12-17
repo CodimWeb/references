@@ -52,26 +52,703 @@
             </div>
         </div>
         <div class="content">
-            <div class="container">
-                <div class="login">
-                    <h1 class="login__title"><span class="login__title__decor">Reference Vault</span> puts the power of networking to work for both employers and job seekers.</h1>
-                    <div class="login__description">
-                        <div class="login__description__row">
-                            <div class="login__description__item">
-                                <h3 class="login__description__title">For Job Seekers</h3>
-                                <p class="login__description__text">Boost your resume by adding video recommendations from verified references.</p>
-                            </div>
-                            <div class="login__description__item">
-                                <h3 class="login__description__title">For Employers</h3>
-                                <p class="login__description__text">Gain valuable insights into candidates, and make better informed decisions while simplifying and expediting recruitment.</p>
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="login__auth">
-                        <button class="btn btn-primary btn-block">Log in with Linkedin</button>
+            <div class="references__nav-section">
+                <div class="container">
+                    <div class="references__nav">
+                        <h1 class="h1 references__title">References</h1>
+                        <div class="references__search">
+                            <form action="" class="references__form">
+                                <i class="icon icon-search"></i>
+                                <input type="text" class="form-control references__search-field" placeholder="Search">
+                                <button class="btn  references__search-btn">
+                                    <img src="img/icons/arrow-circle-right.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                        <div class="references__nav__action">
+                            <button class="btn btn-primary btn-md">Request</button>
+                            <button class="btn btn-secondary btn-md">Share all</button>
+                        </div>
+                        <div class="references__nav__tabs">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">all</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link point" id="for-me-tab" data-toggle="tab" href="#for-me" role="tab" aria-controls="for-me" aria-selected="false">for me</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="by-me-tab" data-toggle="tab" href="#by-me" role="tab" aria-controls="by-me" aria-selected="false">by me</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="references__content">
+                <div class="container">
+                    <p class="references__subtitle">You received 10 views in the past 30 days</p>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <div class="references-item__label">new</div>
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-cinema"></i>
+                                                For
+                                                <a href="#">Emma Stone</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item archive">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                    <span class="icon-title">unarchive</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="references-item__devider-desctop">
+                                    <div></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="references-item__devider-desctop">
+                                    <div></div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="references-item">
+                                        <div class="references-item__label-container">
+                                            <p class="references-item__for-user">
+                                                <i class="icon icon-music"></i>
+                                                For
+                                                <a href="#">Robert Barateon</a>
+                                            </p>
+                                        </div>    
+                                        <div class="references-item__body">
+                                            <div class="references-item__image">
+                                                <!-- widget or image -->
+                                                <img src="img/widget-1.jpg" alt="">
+                                            </div>
+                                            <div class="references-item__user">
+                                                <a href="#" class="references-item__user-ava">
+                                                    <img src="img/user-ava.jpg" alt="">
+                                                </a>
+                                                <a href="#" class="references-item__user-linkedin">
+                                                    <i class="icon icon-linkedin"></i>
+                                                </a>
+                                                <div class="references-item__user-info">
+                                                    <div class="references-item__user-container">
+                                                        <a href="#" class="h5 references-item__user-name">Patrick Baitman</a>
+                                                    </div>
+                                                    <div><a href="#" class="references-item__user-position">Senior Manager @</a></div>
+                                                    <div><a href="#" class="references-item__user-company">Reference Republic</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="references-item__action">
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-unarchive"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 8C18.1046 8 19 7.10457 19 6C19 4.89543 18.1046 4 17 4C15.8954 4 15 4.89543 15 6C15 7.10457 15.8954 8 17 8Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M7 14C8.10457 14 9 13.1046 9 12C9 10.8954 8.10457 10 7 10C5.89543 10 5 10.8954 5 12C5 13.1046 5.89543 14 7 14Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M17 20C18.1046 20 19 19.1046 19 18C19 16.8954 18.1046 16 17 16C15.8954 16 15 16.8954 15 18C15 19.1046 15.8954 20 17 20Z" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M9 13.5L15 17" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M15 7L9 10.5" class="icon-share" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-download"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-message"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="references-item__action__link">
+                                                    <i class="icon icon-trash"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="for-me" role="tabpanel" aria-labelledby="for-me-tab">2</div>
+                        <div class="tab-pane fade" id="by-me" role="tabpanel" aria-labelledby="by-me-tab">3</div>
+                    </div>
+                </div>
+<!-- 
+                <hr>
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">1</div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
+                  </div> -->
+            </div>   
         </div>
         <div class="footer">
             <div class="container">
