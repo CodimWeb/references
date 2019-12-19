@@ -18,7 +18,7 @@
                             <img src="img/logo.svg" alt="" class="header__logo__img">
                         </a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-5">
                         <nav class="header__navbar">
                             <ul class="header__nav">
                                 <li class="header__nav__item">
@@ -43,6 +43,34 @@
                         </nav>
                     </div>
                     <div class="col-3">
+                        <div class="header__action">
+                            <div class="header__search">
+                                <form action="" class="header__form">
+                                    <i class="icon icon-search"></i>
+                                    <input type="text" class="form-control header__search-field" placeholder="Search">
+                                    <button class="btn header__search-btn">
+                                        <img src="img/icons/arrow-circle-right.svg" alt="">
+                                    </button>
+                                    <div class="result-search">
+                                        <div class="result-search__scroll-container">
+                                            <ul class="result-search__list">
+                                                <li class="result-search__item"><a href="#">Patrick Bateman</a></li>
+                                                <li class="result-search__item"><a href="#">Patriot</a></li>
+                                                <li class="result-search__item"><a href="#">Parlament</a></li>
+                                                <li class="result-search__item"><a href="#">Patrick Bateman</a></li>
+                                                <li class="result-search__item"><a href="#">Patriot</a></li>
+                                                <li class="result-search__item"><a href="#">Parlament</a></li>
+                                                <li class="result-search__item"><a href="#">Patrick Bateman</a></li>
+                                                <li class="result-search__item"><a href="#">Patriot</a></li>
+                                                <li class="result-search__item"><a href="#">Parlament</a></li>
+                                            </ul>
+                                        </div>    
+                                    </div>
+                                </form>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-1">
                         <button class="btn btn-menu">
                             <span class="line line-top"></span>
                             <span class="line line-bottom"></span>
@@ -54,17 +82,34 @@
         <div class="content">
             <div class="references__nav-section">
                 <div class="container">
-                    <div class="references__nav">
-                        <h1 class="h1 references__title">References</h1>
-                        <div class="references__search">
-                            <form action="" class="references__form">
-                                <i class="icon icon-search"></i>
-                                <input type="text" class="form-control references__search-field" placeholder="Search">
-                                <button class="btn  references__search-btn">
-                                    <img src="img/icons/arrow-circle-right.svg" alt="">
-                                </button>
-                            </form>
+                    <div class="row references__nav">
+                        <div class="col-3">
+                            <h1 class="h1 references__title">References</h1>
                         </div>
+                        <div class="col-5">
+                            <div class="references__nav__tabs">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">all</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link point" id="for-me-tab" data-toggle="tab" href="#for-me" role="tab" aria-controls="for-me" aria-selected="false">for me</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="by-me-tab" data-toggle="tab" href="#by-me" role="tab" aria-controls="by-me" aria-selected="false">by me</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="references__nav__action">
+                                <button class="btn btn-primary btn-md">Request</button>
+                                <button class="btn btn-secondary btn-md">Share all</button>
+                            </div>    
+                        </div>    
+                    </div>
+                    <!-- <div class="references__nav">
+                        <h1 class="h1 references__title">References</h1>
                         <div class="references__nav__action">
                             <button class="btn btn-primary btn-md">Request</button>
                             <button class="btn btn-secondary btn-md">Share all</button>
@@ -82,7 +127,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="references__content">

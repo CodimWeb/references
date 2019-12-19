@@ -10,7 +10,7 @@ import '../scss/style.scss';
 
 
 $(document).ready(function(){
-	// console.log(Tab)
+	//sticky page
     var footer = $('.footer')
     var footerHeight = footer.outerHeight();
 	$('.wrapper').css({
@@ -22,6 +22,38 @@ $(document).ready(function(){
 			'padding-bottom': footerHeight
 		});
 	});
+
+	//show search dropdown
+	$('.header__search-field').on('input', function(e){
+		if(e.target.value.length > 1) {
+			$(this).siblings('.result-search').fadeIn(250);
+			$(this).siblings('.header__search-btn').fadeIn(250);
+		} else {
+			$(this).siblings('.result-search').fadeOut(250);
+			$(this).siblings('.header__search-btn').fadeOut(250);
+		}
+
+		//ajax here
+	})
+
+	//click on search item 
+	$('.result-search__item').on('click', function(){
+		$('.header__search-field').val($(this).text());
+		$('.result-search').fadeOut(250);
+		$('.header__search-btn').fadeOut(250);
+
+		//ajax here
+	});
+
+	//hide search dropdown
+	$('body').on('click', function(e){
+		if($(e.target).hasClass('header__search') || $(e.target).parents('.header__search').length > 0) {
+			
+		} else {
+			$('.result-search').fadeOut(250);
+		}
+	});
+
 
 	// create name for link
 	$('.references-item__add-name').on('click', function(){
