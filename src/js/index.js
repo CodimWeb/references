@@ -2,11 +2,10 @@ import $ from 'jquery';
 
 //BS4 components
 import Tab from 'bootstrap/js/src/tab'
-// import bootstrap from 'bootstrap';
+import Modal from 'bootstrap/js/src/modal'
 
 //styles
 import '../scss/style.scss';
-
 
 
 $(document).ready(function(){
@@ -141,4 +140,93 @@ $(document).ready(function(){
 			item.find('.share-link__edit-form').fadeIn(300);
 		}, 300)
 	});
+
+	var shareList = [];
+
+	$('.grid-item').each(function(index, item){
+		var itemData = {
+			image: $(this).find('.references-item__image img').attr('src'),
+			name: $(this).find('.references-item__user-name').text(),
+			nameLink: $(this).find('.references-item__user-name').attr('href'),
+			userPosition: $(this).find('.references-item__user-position').text(),
+			userPositionLink: $(this).find('.references-item__user-position').attr('href'),
+			userCompany: $(this).find('.references-item__user-company').text(),
+			userCompanyLink: $(this).find('.references-item__user-company').attr('href'),
+		}
+		shareList.push(itemData);
+	});
+
+	var maxPosition = shareList.length -1;
+
+	$('body').on('click', '.btn-share-prev', function(){
+		var position = parseInt($(this).parents('.grid-item').data('position')) -1;
+		if(position > 0) {
+			var tmp = shareList[position];
+			shareList[position] = shareList[position -1];
+			shareList[position -1] = tmp;
+			renderShareList(shareList);
+
+		} else {
+			position = maxPosition;
+			var tmp = shareList[0];
+			shareList.splice(0 , 1);
+			shareList.push(tmp);
+			renderShareList(shareList);
+		}
+	})
+
+	$('body').on('click', '.btn-share-next', function(){
+		var position = parseInt($(this).parents('.grid-item').data('position')) -1;
+		if(position == maxPosition) {
+			var tmp = shareList[0];
+			shareList[0] = shareList[maxPosition];
+			shareList[maxPosition] = tmp;
+			renderShareList(shareList);
+		} else {
+			var tmp = shareList[position + 1];
+			shareList[position +1] = shareList[position];
+			shareList[position] = tmp;
+			renderShareList(shareList);
+		}
+	})
+
 });
+
+function renderShareList(arr) {
+	var container = $('.grid-share');
+	container.empty();
+	$.each(arr, function(index, item){
+		container.append(''+
+			'<div class="col-3 grid-item" data-position="'+ (index +1) +'">' +
+				'<div class="references-item">' +
+					'<div class="references-item__body">' +
+						'<div class="references-item__image">' +
+							'<img src="'+ item.image +'" alt="">' +
+						'</div>' +
+						'<div class="references-item__user">' +
+							'<div class="references-item__user-info references-item__user-info--share-all">' +
+								'<div class="share-all-control">' +
+									'<button type="button" class="btn btn-share-prev">' +
+										'<svg class="icon-share-desctop icon-arrow-left" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+											'<path d="M4.58301 1.5L1.08301 5L4.58301 8.5" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+										'</svg>' +
+									'</button>' +
+									'<button type="button" class="btn btn-share-next">' +
+										'<svg class="icon-share-desctop icon-arrow-right" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+											'<path d="M1.41699 8.5L4.91699 5L1.41699 1.5" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+										'</svg>' +
+									'</button>' +
+								'</div>' +
+								'<div class="references-item__user-container references-item__user-container--share-all">' +
+									'<a href="'+ item.nameLink +'" class="h4 references-item__user-name references-item__user-name--share-all">'+ item.name +'</a>' +
+								'</div>' +
+								'<div><a href="'+ item.userPositionLink +'" class="references-item__user-position references-item__user-position--share-all">'+ item.userPosition +'</a></div>' +
+								'<div><a href="'+ item.userCompanyLink +'" class="references-item__user-company references-item__user-company--share-all">'+ item.userCompany +'</a></div>' +
+							'</div>' +
+						'</div>' +
+					'</div>' +
+				'</div>' +
+			'</div>'
+		)
+	})
+}

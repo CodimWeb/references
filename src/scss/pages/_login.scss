@@ -61,4 +61,44 @@
         max-width: 600px;
         margin: 0 auto 30px;
     }
+
+    &__panel {
+        position: relative;
+    }
+
+    &__user {
+        width: 226px;
+        height: 226px;
+        background: #fff;
+        position: absolute;
+        left: -3px;
+        top: 10px;
+        border-radius: 4px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.03);
+        padding: 28px 30px 10px 30px;
+    }
+
+    &__user__ava {
+        width: 68px;
+        height: 68px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    &__user__description {
+        font-size: 13px;
+        line-height: 20px;
+        color: $gray-650;
+
+        a {
+            color: $gray-850;
+            white-space: nowrap;
+            text-decoration: underline;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
 }

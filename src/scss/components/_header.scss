@@ -122,6 +122,7 @@
         }
 
         &:focus {
+            color: $gray-850;
             box-shadow: none;
             border: none;
             outline: none;

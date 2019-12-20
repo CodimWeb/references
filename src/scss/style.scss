@@ -12,6 +12,7 @@
 //BS components
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/modal";
 
 //fontello
 @import "fontello/fontello";
@@ -33,7 +34,9 @@
 @import 'components/references__content';
 @import 'components/references-item';
 @import 'components/view-item';
+@import 'components/modals';
 
 //pages
 @import 'pages/login';
 @import 'pages/my-share';
+@import 'pages/share-all';

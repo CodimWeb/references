@@ -1,0 +1,76 @@
+.references__content--share-all {}
+
+.references__content--share-all .references__subtitle {
+    margin-top: 30px;
+}
+
+.references-item__user-info--share-all {
+    overflow: visible;
+}
+
+.references-item__user-container--share-all {
+    padding-right: 70px;
+}
+
+.references-item__user-name--share-all {
+    margin: 0 0 11px;
+}
+
+.references-item__user-position--share-all {
+    font-size: 15px;
+    line-height: 19px;
+    margin-bottom: 0px;
+}
+
+.references-item__user-company--share-all {
+    font-size: 15px;
+}
+
+.share-all-control {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background: $search-bg;
+    z-index: 5;
+}
+
+.share-all-control .btn {
+    margin: 0 5px;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    background: transparent;
+
+    svg {
+        margin-top: -5px;
+        path {
+            stroke: $blue;
+        }
+    }
+}
+
+.grid-item {
+    margin-bottom: 35px;
+}
+
+.grid-item:before {
+    content: attr(data-position);
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    position: absolute;
+    left: 35px;
+    top: 13px;
+    z-index: 10;
+}

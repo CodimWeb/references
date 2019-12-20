@@ -103,31 +103,11 @@
                         </div>
                         <div class="col-4">
                             <div class="references__nav__action">
-                                <button class="btn btn-primary btn-md">Request</button>
+                                <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#modal-new-video">Request</button>
                                 <button class="btn btn-secondary btn-md">Share all</button>
                             </div>    
                         </div>    
                     </div>
-                    <!-- <div class="references__nav">
-                        <h1 class="h1 references__title">References</h1>
-                        <div class="references__nav__action">
-                            <button class="btn btn-primary btn-md">Request</button>
-                            <button class="btn btn-secondary btn-md">Share all</button>
-                        </div>
-                        <div class="references__nav__tabs">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">all</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link point" id="for-me-tab" data-toggle="tab" href="#for-me" role="tab" aria-controls="for-me" aria-selected="false">for me</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="by-me-tab" data-toggle="tab" href="#by-me" role="tab" aria-controls="by-me" aria-selected="false">by me</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="references__content">
@@ -195,7 +175,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -260,7 +240,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -325,7 +305,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -433,7 +413,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -498,7 +478,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -563,7 +543,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -628,7 +608,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -696,7 +676,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -761,7 +741,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#" class="references-item__action__link">
+                                                <a href="#modal-remove-reference" class="references-item__action__link" data-toggle="modal">
                                                     <i class="icon icon-trash"></i>
                                                 </a>
                                             </li>
@@ -774,25 +754,6 @@
                         <div class="tab-pane fade" id="by-me" role="tabpanel" aria-labelledby="by-me-tab">3</div>
                     </div>
                 </div>
-<!-- 
-                <hr>
-
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-                    </li>
-                  </ul>
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">1</div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
-                  </div> -->
             </div>   
         </div>
         <div class="footer">
@@ -830,6 +791,40 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-new-video" id="modal-new-video" tabindex="-1" role="dialog" aria-labelledby="modal-new-video" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="h3 modal-title">New<br/>Video Reference</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon icon-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-remove-reference" id="modal-remove-reference" tabindex="-1" role="dialog" aria-labelledby="modal-new-video" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="h3 modal-title">Do you really want to remove the reference?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary">YES</button>
                 </div>
             </div>
         </div>

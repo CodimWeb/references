@@ -1,0 +1,105 @@
+.modal-open {
+    padding-right: 0px !important;
+    // overflow: visible !important;
+}
+
+.modal {
+    padding-right: 0px !important;
+}
+
+.modal-dialog {
+
+    @media (min-width: 576px) {
+        max-width: 100%;
+    }
+
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    padding: 15px;
+    margin: 0;
+}
+
+
+.modal-content {
+    margin: auto;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-header {
+    display: block;
+    position: relative;
+}
+
+.modal-header .close {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: $gray-600;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        color: $blue;
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 0.3;
+}
+
+// modal-new-video
+
+.modal-new-video .modal-content {
+    max-width: 540px;
+    background: $gray-400;
+    border-radius: 5px;
+}
+
+.modal-new-video .modal-header {
+    padding: 25px 30px;
+    display: block;
+}
+
+.modal-new-video .modal-title {
+    color: $blue;
+}
+
+
+// modal remove reference
+
+.modal-remove-reference .modal-content {
+    max-width: 310px;
+    background: $gray-400;
+    border-radius: 5px;
+}
+
+.modal-remove-reference .modal-header {
+    padding: 25px 30px 9px;
+    border: none;
+}
+
+.modal-remove-reference .modal-title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.4px;
+}
+
+.modal-remove-reference .modal-footer {
+    justify-content: center;
+    border: none;
+    padding: 15px 15px 29px;
+    border: none;
+}
+
+.modal-remove-reference .modal-footer .btn {
+    width: 120px;
+    margin: 0 5px;
+}

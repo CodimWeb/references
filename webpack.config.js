@@ -89,6 +89,10 @@ module.exports = (env, options) => {
                 filename: 'my-views.html',
                 template: 'src/my-views.html'
             }),
+            new HtmlWebpackPlugin({
+                filename: 'share-all.html',
+                template: 'src/share-all.html'
+            }),
             //img,
             new CopyWebpackPlugin([{
                 from: './src/img',
