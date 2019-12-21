@@ -85,7 +85,7 @@
                     <div class="references__nav">
                         <div>
                             <h1 class="h1 references__title references__title--share">Share All</h1>
-                            <button class="btn btn-primary btn-share">SHARE</button>
+                            <button class="btn btn-primary btn-share" data-toggle="modal" data-target="#modal-share">SHARE</button>
                         </div>    
                         <a href="#" class="go-back">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -330,6 +330,34 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal share -->
+    <div class="modal fade modal-share" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="modal-share" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="h1 modal-title modal-share__title">Your link has been <span>created</span></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="icon icon-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-share__label">Share Link:</p>
+                    <div class="modal-share__panel">
+                        <a href="#asdadasd" class="modal-share__link">https://www.referencehub.com/JH31ydksydYYh686KLhjg656379k</a>
+                        <div class="modal-share__action">
+                            <button class="btn modal-share__copy">
+                                <i class="icon icon-copy"></i>
+                            </button>
+                            <div class="modal-share__tooltip">Link copied!</div>
+                        </div>    
+                    </div>
+                    <p class="modal-share__description">Please share the link with your Reference via Email, Messenger or Text. Your Reference will be able to record video recommendation from any camera-equipped device after clicking the link.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

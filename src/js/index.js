@@ -1,8 +1,14 @@
+'use strict'
+
 import $ from 'jquery';
 
 //BS4 components
-import Tab from 'bootstrap/js/src/tab'
-import Modal from 'bootstrap/js/src/modal'
+// import bootstrap from 'bootstrap';
+import Tab from 'bootstrap/js/dist/tab'
+import Modal from 'bootstrap/js/dist/modal'
+
+//libs
+import Inputmask from "inputmask";
 
 //styles
 import '../scss/style.scss';
@@ -10,7 +16,7 @@ import '../scss/style.scss';
 
 $(document).ready(function(){
 	//sticky page
-    var footer = $('.footer')
+    let footer = $('.footer')
     var footerHeight = footer.outerHeight();
 	$('.wrapper').css({
 		'padding-bottom': footerHeight
@@ -34,6 +40,19 @@ $(document).ready(function(){
 
 		//ajax here
 	})
+
+	// Reference menu 
+
+	var headerNavLink  = $('.references__nav__link');
+
+	headerNavLink.on('click', function(e){
+		e.preventDefault();
+		headerNavLink.removeClass('active');
+		$(this).addClass('active').removeClass('point');
+
+		//ajax here
+
+	});
 
 	//click on search item 
 	$('.result-search__item').on('click', function(){
@@ -190,6 +209,24 @@ $(document).ready(function(){
 		}
 	})
 
+	$('.new-video__field').on('focus', function(){
+		$(this).parents('.new-video__form-group').addClass('active');
+	});
+
+	$('.new-video__field').on('blur', function(){
+		if($(this).val() == '') {
+			$(this).parents('.new-video__form-group').removeClass('active');
+		}
+	});
+
+	Inputmask().mask(document.querySelectorAll(".masked-date"));
+
+	$('.modal-share__copy').on('click', function(){
+		// var copyText = $('.modal-share__link').attr('href');
+		// document.execCommand("copy");
+		$(this).addClass('active');
+		$(this).siblings('.modal-share__tooltip').fadeIn(200);
+	});
 });
 
 function renderShareList(arr) {

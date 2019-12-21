@@ -1,0 +1,115 @@
+.comment {
+    padding-top: 24px;
+    border-top: 1px solid $gray-300;
+
+    &__title {
+        letter-spacing: 0.4px;
+        margin-bottom: 13px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+
+        &__panel {
+            background: #fff;
+            flex: 1;
+            border-radius: 4px;
+            padding: 0 30px;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding: 29px 0 18px;
+        }
+    }
+
+    &__user {
+        flex: 1;
+        display: flex;
+        min-width: 0;
+    }
+
+    &__user__ava {
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__user__data {
+        width: calc(100% -64px);
+        overflow: hidden;
+    }
+
+    &__user__name {
+        font-size: 17px;
+        line-height: 24px;
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        a {
+            text-decoration: none;
+            color: $gray-850;
+            transition: color 0.25s ease-in-out;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: 19px;
+        color: $gray-650;
+    }
+
+    &__item__reply {
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        font-family: $poppins;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        color: $gray-650;
+        text-transform: none;
+        transition: color 0.25s ease-in-out;
+
+        svg {
+            margin-right: 8px;
+        }
+
+        .corner-left-up {
+            fill: $gray-650;
+            transition: 0.25s ease-in-out;
+        }
+
+        &:hover {
+            color: $gray-850;
+
+            .corner-left-up {
+                fill: $blue;
+            }
+        }
+    }
+
+    &__item__body {
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-650;
+        padding: 2px 0 24px;
+    }
+}

@@ -1,0 +1,152 @@
+.playlist {
+
+    &__content {
+        padding-top: 40px;
+    }
+
+    &__row {
+        position: relative;
+        &:before {
+            content: '';
+            width: 1px;
+            position: absolute;
+            top: -40px;
+            bottom: 0;
+            left: 75%;
+            transform: translateX(25px);
+            background: $gray-300;
+        }
+    }
+
+    &__video-lg {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 38px;
+    }
+
+    .references-item__for-user {
+        padding-left: 40px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .references-item__label-container {
+        margin-bottom: 23px;
+    }
+
+    .references-item__user {
+        margin-bottom: 35px;
+    }
+
+    .references-item__user-ava {
+        width: 68px;
+        min-width: 68px;
+        height: 68px;
+        margin-right: 20px;
+    }
+
+    .references-item__user-info {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .references-item__user-linkedin {
+        font-size: 25px;
+        top: 4px;
+    }
+
+    .references-item__user-container {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 4px;
+    }
+
+    .references-item__user-position {
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0 10px 0 0;
+    }
+
+    .references-item__user-company {
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    &__confirm {
+        padding: 0 30px;
+        background: #fff;
+        border-radius: 4px;
+        margin-bottom: 29px;
+    }
+
+    &__confirm__header {
+        border-bottom: 1px solid $gray-300;
+        padding: 21px 0 14px;
+    }
+
+    &__confirm__title {
+        margin-bottom: 3px;
+        letter-spacing: 0.5px;
+    }
+
+    &__confirm__subtitle {
+        font-size: 15px;
+        line-height: 25px;
+        color: $gray-650;
+        margin: 0;
+    }
+
+    &__confirm__body {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 23px;
+        padding-bottom: 4px;
+    }
+
+    &__confirm__item {
+        width: calc(100% - 130px);
+        margin-bottom: 23px;
+    }
+
+    &__confirm__item--date {
+        width: 125px;
+        min-width: 125px;
+        padding-right: 4px;
+
+        .playlist__confirm__data {
+            width: 100%;
+            padding-right: 30px;
+        }
+    }
+
+    &__confirm__label {
+        font-size: 13px;
+        line-height: 19px;
+        color: $gray-650;
+        margin-bottom: 3px;
+    }
+
+    &__confirm__data {
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 600;
+        display: inline-block;
+        color: $gray-850;
+        padding-right: 52px;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: url(../img/icons/icon-check.svg) no-repeat center center /contain;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    }
+}

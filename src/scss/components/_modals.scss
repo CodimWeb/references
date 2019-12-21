@@ -30,25 +30,33 @@
 .modal-header {
     display: block;
     position: relative;
+    border: none;
 }
 
 .modal-header .close {
     border: none;
     background: transparent;
     margin: 0;
-    padding: 0;
-    font-size: 20px;
-    color: $gray-600;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1;
+    color: #c0c2cc;
     opacity: 1;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 14px;
+    top: 12px;
     transition: color 0.25s ease-in-out;
+    outline: none !important;
 
     &:hover {
         opacity: 1;
         color: $blue;
     }
+
+}
+
+.modal-footer {
+    border: none;
 }
 
 .modal-backdrop.show {
@@ -58,13 +66,13 @@
 // modal-new-video
 
 .modal-new-video .modal-content {
-    max-width: 540px;
+    max-width: 420px;
     background: $gray-400;
     border-radius: 5px;
 }
 
 .modal-new-video .modal-header {
-    padding: 25px 30px;
+    padding: 25px 30px 22px;
     display: block;
 }
 
@@ -72,6 +80,89 @@
     color: $blue;
 }
 
+.modal-new-video .modal-body {
+    display: block;
+    padding: 0 30px;
+}
+
+.new-video__title {
+    letter-spacing: 0.5px;
+    margin-bottom: 11px;
+}
+.new-video__subtitle {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.new-video__form .row {
+    margin-left: -30px; 
+    margin-right: -30px; 
+}
+
+.new-video__form .row >div {
+    padding: 0 30px;
+}
+
+.new-video__form-group {
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 22px;
+    border-bottom: 1px solid $gray-600;
+}
+
+.new-video__form-group label {
+    font-size: 15px;
+    line-height: 22px;
+    color: $gray-650;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 24px;
+    z-index: 3;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.new-video__form-group .new-video__field {
+    height: 30px;
+    line-height: 28px;
+    padding: 0 0 6px;
+    font-size: 15px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:focus {
+        border: none;
+        box-shadow: none;
+        outline: none;
+        color: $gray-850;
+        background: transparent;
+    }
+}
+
+.new-video__form-group.active label {
+    font-size: 13px;
+    color: $blue;
+    top: 3px;
+}
+
+.modal-new-video .modal-footer {
+    padding: 49px 0 30px;
+    margin: 0 -5px;
+    justify-content: center;
+}
+
+.modal-new-video .modal-footer .btn {
+    width: 175px;
+    margin: 0 5px;
+}
 
 // modal remove reference
 
@@ -102,4 +193,130 @@
 .modal-remove-reference .modal-footer .btn {
     width: 120px;
     margin: 0 5px;
+}
+
+// modal share
+
+.modal-share {
+
+    .modal-content {
+        max-width: 730px;
+        background: $gray-400;
+        border-radius: 5px;
+        margin: 0 auto auto;
+    }
+
+    .modal-header {
+        padding: 22px 40px 10px;
+
+        .close {
+            right: 8px;
+            top: 9px;
+        }
+    }
+
+    .modal-body {
+        padding: 1px 40px 34px;
+    }
+
+    &__title {
+        letter-spacing: 1px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    &__label {
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-650;
+        margin-bottom: 9px;
+    }
+
+    &__panel {
+        position: relative;
+        padding: 0 40px;
+        height: 100px;
+        line-height: 100px;
+        margin: 0 -40px;
+        background: $search-bg;
+    }
+
+    &__action {
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        font-size: 0;
+        line-height: 1;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        color: $blue;
+        text-decoration: underline;
+        word-break: break-all;
+
+        &:hover {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    &__copy {
+        width: auto;
+        height: auto;
+        background: transparent;
+        font-size: 20px;
+        color: #c0c2cc;
+        border: none;
+        padding: 0;
+        font-size: 24px;
+        line-height: 1;
+        transition: color 0.25s ease-in-out;
+        position: relative;
+
+        &.active {
+            color: $blue;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__tooltip {
+        background: #fff;
+        position: absolute;
+        right: 11px;
+        bottom: 38px;
+        width: 126px;
+        font-size: 15px;
+        line-height: 22px;
+        color: #1f2539;
+        padding: 11px 19px;
+        border-radius: 5px 5px 0 5px;
+        box-shadow: 0px 2px 6px rgba(85, 104, 254, 0.15);
+        display: none;
+
+        &:before {
+            content: '';
+            border-top: 6px solid #fff;
+            border-left: 6px solid transparent;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+        }
+    }
+
+    &__description {
+        font-size: 15px;
+        line-height: 25px;
+        color: $gray-650;
+        margin: 32px 0 0;
+        padding-right: 100px;
+    }
 }
