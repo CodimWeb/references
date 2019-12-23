@@ -1,0 +1,253 @@
+.profile {
+    height: 100%;
+    width: 100%;
+    // transform: translateY(-105%);
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background: $gray-100;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: 0.5s;
+
+    &.open {
+        transform: translateY(0);
+    }
+
+    &.opened {
+        overflow-y: auto;
+    }
+
+    .header {
+        position: static;
+        height: 120px;
+    }
+
+    .header__row {
+        height: 120px;
+    }
+
+    .header__navbar {
+        margin-left: 0;
+    }
+
+    .header__nav__link {
+        padding-left: 0;
+        font-size: 44px;
+        line-height: 65px;
+        font-weight: 600;
+    }
+
+    &__logout {
+        display: inline-block;
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-625;
+        margin-left: 84px;
+        transition: color 0.25s ease-in-out;
+
+        &:hover {
+            color: $blue;
+
+            .icon-log-out {
+                path {
+                    stroke: $blue;
+                }
+            }    
+        }
+    }
+
+    .icon-log-out {
+        margin-left: 15px;
+        path {
+            stroke: $gray-625;
+            transition: 0.25s ease-in-out;
+        }
+    }
+
+    &__btn-close {
+        display: block;
+        width: auto;
+        height: auto;
+        background: transparent;
+        font-size: 22px;
+        line-height: 1;
+        color: $gray-850;
+        margin-left: auto;
+    }
+
+    &__content {
+        padding-top: 60px;
+    }
+
+    &__item {
+        width: 100%;
+        margin: 0 20px;
+        outline: none;
+        
+        &__panel {
+            background: #fff;
+        }
+
+        &.slick-current {
+            .profile__item__panel {
+                background: transparent;
+            }
+        }
+
+        &__option {
+            max-width: 644px;
+            background: #fff;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.03);
+            padding: 49px 50px 50px;
+        }
+    }
+
+    &__user {
+        display: flex;
+    }
+
+    &__user__ava {
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+        margin-right: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__user__name {
+        margin-bottom: 23px;
+        text-align: left;
+
+        span {
+            display: block;
+        }
+    }
+
+    .profile__load__photo {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0;
+        background: $search-bg;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        svg {
+            transform: translateY(-2px);
+        }
+    }
+
+    &__edit__photo {
+        display: flex;
+        align-items: center;
+        width: 330px;
+        height: 50px;
+        background: $search-bg;
+        border-radius: 50px;
+        padding-left: 15px;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: auto;
+            padding: 0;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 600;
+            color: $gray-850;
+            background: transparent;
+            margin: 0 20px 0 0;
+            text-transform: none;
+            font-family: $poppins;
+
+            .icon {
+                font-size: 22px;
+                color: $blue;
+                margin-right: 7px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__membership {
+        
+    }
+
+    &__membership__item {
+        margin-bottom: 52px;
+
+        input[type="radio"] {
+            // display: none;
+        }
+
+        input[type="radio"]:checked + .profile__membership__info {
+            &:before {
+                border: 1px solid $blue;
+            }
+
+            &:after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: $blue;
+                border-radius: 50%;
+                position: absolute;
+                top: 12px;
+                left: 18px;
+            }
+
+            .profile__membership__title {
+                color: $blue;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__membership__info {
+        padding-left: 57px;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            border: 1px solid $gray-550;
+            box-sizing: border-box;
+            border-radius: 4px;
+            position: absolute;
+            top: 4px;
+            left: 10px;
+        }
+    }
+
+    &__membership__title {
+        margin-bottom: 16px;
+        color: $gray-625;
+        cursor: pointer;
+    }
+
+    &__membership__subtitle {
+        font-size: 15px;
+        line-height: 22px;
+        color: $gray-650;
+    }
+}

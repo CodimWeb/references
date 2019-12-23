@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="modal-open">
     <div class="wrapper">
         <div class="header">
             <div class="container">
@@ -749,6 +749,155 @@
                     </div>
                 </div>
             </div>   
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row footer__row">
+                    <div class="col-6">
+                        <ul class="footer-list">
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">FAQ</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">About Service</a>
+                            </li>
+                            <li class="footer-list__item">
+                                <a href="#" class="footer-list__link">Tutorials</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="footer-social">
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <i class="icon icon-fb"></i>
+                                </a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <i class="icon icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="footer-social__item">
+                                <a href="#" class="footer-social__link">
+                                    <i class="icon icon-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="profile" class="profile">
+        <div class="header profile__header">
+            <div class="container">
+                <div class="row header__row">
+                    <div class="col-3">
+                        <a href="#" class="header__logo">
+                            <img src="img/logo.svg" alt="" class="header__logo__img">
+                        </a>
+                    </div>
+                    <div class="col-5">
+                        <nav class="header__navbar">
+                            <ul class="header__nav">
+                                <li class="header__nav__item">
+                                    <a href="#" class="header__nav__link profile__nav__link active" data-target="profile">Profile</a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="#" class="header__nav__link profile__nav__link" data-target="membership">Membership</a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="#" class="header__nav__link profile__nav__link" data-target="faq">FAQ</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-3">
+                        <a href="#" class="profile__logout">
+                            Logout
+                            <svg class="icon-log-out" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="" d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 17L21 12L16 7" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 12H9" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-1">
+                        <button class="btn profile__btn-close">
+                            <i class="icon icon-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile__content">
+            <div class="profile-slider">
+                <div class="profile__item profile__user" data-item="profile">
+                    <div class="profile__item__panel">
+                        <div class="profile__item__option">
+                            <div class="profile__user">
+                                <div class="profile__user__ava">
+                                    <img src="img/widget-3.jpg" alt="">
+                                </div>
+                                <div class="profile__user__data">
+                                    <div class="h3 profile__user__name">Thomas <span>Anderson</span></div>
+                                    <label class="btn profile__load__photo">
+                                        <input type="file" id="profile-ava" class="hidden">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 7H16V5.5C16 4.83696 15.7366 4.20107 15.2678 3.73223C14.7989 3.26339 14.163 3 13.5 3H10.5C9.83696 3 9.20108 3.26339 8.73223 3.73223C8.26339 4.20107 8 4.83696 8 5.5V7H5C4.20435 7 3.44129 7.31607 2.87868 7.87868C2.31607 8.44129 2 9.20435 2 10V18C2 18.7956 2.31607 19.5587 2.87868 20.1213C3.44129 20.6839 4.20435 21 5 21H19C19.7957 21 20.5587 20.6839 21.1213 20.1213C21.6839 19.5587 22 18.7956 22 18V10C22 9.20435 21.6839 8.44129 21.1213 7.87868C20.5587 7.31607 19.7957 7 19 7ZM10 5.5C10 5.36739 10.0527 5.24021 10.1464 5.14645C10.2402 5.05268 10.3674 5 10.5 5H13.5C13.6326 5 13.7598 5.05268 13.8536 5.14645C13.9473 5.24021 14 5.36739 14 5.5V7H10V5.5ZM20 18C20 18.2652 19.8946 18.5196 19.7071 18.7071C19.5196 18.8946 19.2652 19 19 19H5C4.73478 19 4.48043 18.8946 4.29289 18.7071C4.10536 18.5196 4 18.2652 4 18V10C4 9.73478 4.10536 9.48043 4.29289 9.29289C4.48043 9.10536 4.73478 9 5 9H19C19.2652 9 19.5196 9.10536 19.7071 9.29289C19.8946 9.48043 20 9.73478 20 10V18Z" fill="#5568FE"/>
+                                            <path d="M12 10.5C11.3078 10.5 10.6311 10.7053 10.0555 11.0899C9.47993 11.4744 9.03133 12.0211 8.76642 12.6606C8.50152 13.3002 8.4322 14.0039 8.56725 14.6828C8.7023 15.3618 9.03564 15.9854 9.52513 16.4749C10.0146 16.9644 10.6383 17.2977 11.3172 17.4328C11.9961 17.5678 12.6999 17.4985 13.3394 17.2336C13.9789 16.9687 14.5256 16.5201 14.9101 15.9445C15.2947 15.3689 15.5 14.6922 15.5 14C15.5 13.0717 15.1313 12.1815 14.4749 11.5251C13.8185 10.8687 12.9283 10.5 12 10.5ZM12 15.5C11.7033 15.5 11.4133 15.412 11.1666 15.2472C10.92 15.0824 10.7277 14.8481 10.6142 14.574C10.5007 14.2999 10.4709 13.9983 10.5288 13.7074C10.5867 13.4164 10.7296 13.1491 10.9393 12.9393C11.1491 12.7296 11.4164 12.5867 11.7074 12.5288C11.9983 12.4709 12.2999 12.5006 12.574 12.6142C12.8481 12.7277 13.0824 12.92 13.2472 13.1666C13.412 13.4133 13.5 13.7033 13.5 14C13.5 14.3978 13.342 14.7794 13.0607 15.0607C12.7794 15.342 12.3978 15.5 12 15.5Z" fill="#5568FE"/>
+                                        </svg>
+                                    </label>
+                                    <div class="profile__edit__photo">
+                                        <button class="btn profile__delete__photo">
+                                            <i class="icon icon-trash"></i>
+                                            <span>delete</span>  
+                                        </button>
+                                        <label class="btn profile__delete__photo">
+                                            <input type="file" id="profile-ava" class="hidden">
+                                            <i class="icon icon-download"></i>
+                                            <span>upload new photo</span>  
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="profile__item" data-item="membership">
+                    <div class="profile__item__panel">
+                        <div class="profile__item__option">
+                            <div class="profile__membership">
+                                <label class="profile__membership__item">
+                                    <input type="radio" name="membership" class="hidden">
+                                    <div class="profile__membership__info">
+                                        <h4 class="h4 profile__membership__title">Free Demo Version</h4>
+                                        <p class="profile__membership__subtitle">Here is a brief information about the tariff, conditions and so on that would be immediately clear</p>
+                                    </div>
+                                </label>
+                                <label class="profile__membership__item">
+                                    <input type="radio" name="membership" class="hidden">
+                                    <div class="profile__membership__info">
+                                        <h4 class="h4 profile__membership__title">Annual Premium Access</h4>
+                                        <p class="profile__membership__subtitle">Here is a brief information about the tariff, conditions and so on that would be immediately clear</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile__item " data-item="faq">
+                    <div class="profile__item__panel">
+                        <div class="profile__item__option">
+                            <div class="profile__faq">
+                                faq
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
         <div class="footer">
             <div class="container">

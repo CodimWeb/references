@@ -22,6 +22,26 @@
             justify-content: space-between;
             padding: 29px 0 18px;
         }
+
+        &.active {
+            box-shadow: 0px 2px 30px rgba(31, 37, 57, 0.15);
+
+            .comment__item__form {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__item__answer {
+        padding-left: 30px;
+        position: relative;
+        margin-top: 10px;
+
+        .arrow-left-top {
+            position: absolute;
+            left: 9px;
+            top: 0;
+        }
     }
 
     &__user {
@@ -111,5 +131,88 @@
         line-height: 22px;
         color: $gray-650;
         padding: 2px 0 24px;
+    }
+
+    &__item__form {
+        border-top: 1px solid $gray-300;
+        margin: -5px -30px 0;
+        padding: 30px;
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out;
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__item__field {
+        display: block;
+        resize: none;
+        width: 100%;
+        height: 76px;
+        border-radius: 6px;
+        border: 1px solid $gray-550;
+        padding: 13px 20px;
+        font-size: 15px;
+        line-height: 18px;
+        box-shadow: none;
+        outline: none;
+        color: $gray-850;
+        transition: border-color 0.25s ease-in-out;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+            border-color: $blue;
+        }
+    }
+
+    &__item__form__action {
+        display: flex;
+        margin: 0 -5px;
+
+        .btn {
+            margin: 0 5px;
+        }
+
+        .btn-secondary {
+            width: 180px;
+        }
+
+        .btn-primary {
+            flex: 1;
+        }
+    }
+
+}
+
+.comment-form {
+    padding-top: 23px;
+    padding-bottom: 57px;
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    &__field {
+        display: block;
+        width: 100%;
+        height: 170px;
+        border-radius: 6px;
+        border: 1px solid $gray-300;
+        resize: none;
+        padding: 20px;
+        font-size: 15px;
+        line-height: 18px;
+        box-shadow: none;
+        outline: none;
+        background: transparent;
+        transition: border-color 0.25s ease-in-out;
+
+        &:focus {
+            border-color: $blue;
+            box-shadow: none;
+            outline: none;
+        }
     }
 }

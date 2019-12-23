@@ -2,10 +2,15 @@
 
     &__content {
         padding-top: 40px;
+        border-bottom: 1px solid $gray-300;
     }
 
     &__row {
         position: relative;
+        padding-bottom: 20px;
+    }
+
+    &-border {
         &:before {
             content: '';
             width: 1px;
@@ -104,12 +109,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
         padding-top: 23px;
-        padding-bottom: 4px;
     }
 
     &__confirm__item {
         width: calc(100% - 130px);
-        margin-bottom: 23px;
+        margin-bottom: 25px;
     }
 
     &__confirm__item--date {
@@ -147,6 +151,63 @@
             position: absolute;
             right: 0px;
             top: 0px;
+        }
+    }
+
+    &__column {
+        padding-left: 35px;
+        padding-right: 22px;
+        margin-top: -14px;
+    }
+
+    &-item {
+        display: block;
+        padding: 15px;
+        background-color: transparent;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: background-color 0.25s ease-in-out;
+
+        &__name {
+            position: relative;
+            padding-left: 34px;
+            margin-top: 15px;
+        }
+
+        &__num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #E5E9FB;
+            font-size: 13px;
+            line-height: 24px;
+            text-align: center;
+            font-weight: 600;
+            color: $blue;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &:hover {
+            background: $search-bg;
+
+            .playlist-item__num {
+                color: transparent;
+                background: $blue;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: url(../img/icon-play.svg) no-repeat center center;
+                    overflow: hidden;
+                }
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ import Modal from 'bootstrap/js/dist/modal'
 
 //libs
 import Inputmask from "inputmask";
+import '../js/slick.min.js';
 
 //styles
 import '../scss/style.scss';
@@ -227,7 +228,64 @@ $(document).ready(function(){
 		$(this).addClass('active');
 		$(this).siblings('.modal-share__tooltip').fadeIn(200);
 	});
+
+	//profile
+	$('.btn-menu').on('click', function(){
+		$('body').addClass('modal-open');
+		$('#profile').addClass('open');
+		// setTimeout(function(){
+		// 	$('#profile').addClass('openend');
+		// }, 550);
+		
+	});
+
+	$('.profile__btn-close').on('click', function(){
+		$('#profile').removeClass('open');
+		$('body').removeClass('modal-open');
+		// $('#profile').addClass('open');
+	});
+
+	let slider = $('.profile-slider');
+	slider.not('.slick-initialized').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		centerMode: true,
+		  centerPadding: '105px',
+		slidesToScroll: 1,
+		draggable: false
+	});
+
+	$('.profile__nav__link').on('click', function(){
+		var target = $(this).data('target');
+		var position = $('.profile__item').index($('[data-item='+target+']'));
+		$('.profile__nav__link').removeClass('active')
+		$(this).addClass('active');
+		slider.slick('slickGoTo', position);
+	});
+
+	let fileField = document.getElementById('profile-ava');
+    if(fileField) {
+        fileField.addEventListener('change', handleFileSelect, false);
+    }
 });
+
+let handleFileSelect = (evt) => {
+    let files = evt.target.files;
+    let userImage = document.querySelector('.profile__user__ava img');
+    if(files.length) {
+        for (let i = 0; i < files.length; i++) {
+            if ( (/\.(png|jpeg|jpg)$/i).test(files[i].name) ) {
+                let reader = new FileReader();
+                reader.onload = () => {
+                    userImage.src = reader.result;
+                }
+                reader.readAsDataURL(files[i]);
+            } 
+        }
+    }
+}
+
 
 function renderShareList(arr) {
 	var container = $('.grid-share');

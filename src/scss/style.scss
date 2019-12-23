@@ -17,6 +17,9 @@
 //fontello
 @import "fontello/fontello";
 
+//slick
+@import "plugin/slick";
+
 // abstract
 @import 'abstract/variables';
 
@@ -36,9 +39,11 @@
 @import 'components/view-item';
 @import 'components/modals';
 @import 'components/comments';
+@import 'components/profile';
 
 //pages
 @import 'pages/login';
 @import 'pages/my-share';
 @import 'pages/share-all';
 @import 'pages/playlist';
+@import 'pages/article-page';

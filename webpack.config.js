@@ -97,6 +97,10 @@ module.exports = (env, options) => {
                 filename: 'playlist.html',
                 template: 'src/playlist.html'
             }),
+            new HtmlWebpackPlugin({
+                filename: 'article-page.html',
+                template: 'src/article-page.html'
+            }),
             //img,
             new CopyWebpackPlugin([{
                 from: './src/img',
