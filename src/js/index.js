@@ -245,7 +245,7 @@ $(document).ready(function(){
 		// $('#profile').addClass('open');
 	});
 
-	let slider = $('.profile-slider');
+	let slider = $('.profile__slider');
 	slider.not('.slick-initialized').slick({
 		arrows: false,
 		dots: false,
@@ -267,18 +267,49 @@ $(document).ready(function(){
 	let fileField = document.getElementById('profile-ava');
     if(fileField) {
         fileField.addEventListener('change', handleFileSelect, false);
-    }
+	}
+	
+	$('.profile__user__default__ava').on('click', function(){
+		$('#profile-ava').focus();
+	})
+
+	$('.profile__user__edit').on('click', function(){
+		var item = $(this).parents('.profile__user__item');
+		var data = item.find('.profile__user__item__data');
+		var edit= item.find('.profile__user__item__edit');
+		data.fadeOut(300);
+		setTimeout(() => {
+			edit.fadeIn(300);
+		}, 300);
+	});
+
+	// modal-record
+	$('.modal-record__show-plan').on('click', function(){
+		$('.modal-record__plan').fadeIn(300);
+		$('.modal-record__plan-control').addClass('active');
+	})
+
+	$('.modal').modal('show');
 });
 
 let handleFileSelect = (evt) => {
     let files = evt.target.files;
-    let userImage = document.querySelector('.profile__user__ava img');
+    let userImageContainer = document.querySelector('.profile__user__ava');
     if(files.length) {
         for (let i = 0; i < files.length; i++) {
             if ( (/\.(png|jpeg|jpg)$/i).test(files[i].name) ) {
                 let reader = new FileReader();
                 reader.onload = () => {
-                    userImage.src = reader.result;
+					let image = document.createElement('img');
+					image.onload = () => {
+						let oldImage = document.querySelector('.profile__user__ava img');
+						if(oldImage) {
+							oldImage.remove();
+						}
+						document.querySelector('.profile__user__default__ava').classList.add('hidden');
+						userImageContainer.appendChild(image);
+					}
+                    image.src = reader.result;
                 }
                 reader.readAsDataURL(files[i]);
             } 
