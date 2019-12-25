@@ -304,3 +304,32 @@
         }
     }
 }
+
+
+@media (max-width: 1199px) {
+
+    .header__nav__item {
+        margin-right: 20px;
+    }
+
+    .header__nav__link {
+        font-size: 16px;
+    }
+
+    .header__nav__link .icon-cinema {
+        font-size: 18px;
+        margin-top: -1px;
+    }
+
+    .header__nav__link .icon-view {
+        font-size: 26px;
+    }
+
+    .header__nav__link .icon-star {
+        font-size: 19px;
+    }
+
+    .header__action {
+        margin-left: 0;
+    }
+}

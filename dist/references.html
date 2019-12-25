@@ -8,7 +8,7 @@
     <title>Document</title>
 <link href="./css/style.css" rel="stylesheet"></head>
 
-<body class="modal-open">
+<body>
     <div class="wrapper">
         <div class="header">
             <div class="container">
@@ -18,7 +18,7 @@
                             <img src="img/logo.svg" alt="" class="header__logo__img">
                         </a>
                     </div>
-                    <div class="col-5">
+                    <div class="col-12 col-md-5 mobile-navbar">
                         <nav class="header__navbar">
                             <ul class="header__nav">
                                 <li class="header__nav__item">
@@ -1268,6 +1268,22 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-save-record" id="modal-save-record" tabindex="-1" role="dialog" aria-labelledby="modal-save-record" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                      <div class="modal-save-record__content">
+                          <img src="img/record-video.jpg" alt="" class="full-width">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Re-record</button>
+                    <button type="button" class="btn btn-primary">save</button>
                 </div>
             </div>
         </div>

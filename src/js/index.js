@@ -289,7 +289,7 @@ $(document).ready(function(){
 		$('.modal-record__plan-control').addClass('active');
 	})
 
-	$('.modal').modal('show');
+	
 });
 
 let handleFileSelect = (evt) => {

@@ -660,3 +660,25 @@
         }
     }
 }
+
+.modal-save-record {
+
+    .modal-content {
+        max-width: 644px;
+    }
+
+    .modal-body {
+        padding: 30px 0;
+    }
+
+    .modal-footer {
+        padding: 0 30px 30px;
+        justify-content: center;
+        margin: 0 -5px;
+
+        .btn {
+            width: 50%;
+            margin: 0 5px;
+        }
+    }
+}
